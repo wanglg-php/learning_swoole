@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ws</title>
+</head>
+<body>
+    <script>
+        var ws = "ws://http://47.104.222.132:9503/";
+        var webSocket = new WebSocket(ws);
+
+        webSocket.onopen =function(evt){
+            console.log('链接成功')
+        }
+        webSocket.onclose = function(evt) {
+            console.log('关闭')
+        }
+        webSocket.onmessage =function(evt){
+            console.log(evt.data)
+        }
+        webSocket.onerror =function(evt){
+            console.log('error')
+        }
+    </script>
+</body>evtvt
+</html>evt
